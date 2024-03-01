@@ -1,0 +1,243 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa9dd99996, pid=13284, tid=22440
+#
+# JRE version: OpenJDK Runtime Environment Temurin-17.0.10+7 (17.0.10+7) (build 17.0.10+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-17.0.10+7 (17.0.10+7, mixed mode, tiered, compressed oops, compressed class ptrs, parallel gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x669996]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable -javaagent:c:\Users\tujes\.vscode\extensions\redhat.java-1.28.1-win32-x64\lombok\lombok-1.18.31.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=c:\Users\tujes\AppData\Roaming\Code\User\workspaceStorage\926129535c3579d5b8879cf28cb66572\redhat.java -Daether.dependencyCollector.impl=bf c:\Users\tujes\.vscode\extensions\redhat.java-1.28.1-win32-x64\server\plugins\org.eclipse.equinox.launcher_1.6.700.v20231214-2017.jar -configuration c:\Users\tujes\AppData\Roaming\Code\User\globalStorage\redhat.java\1.28.1\config_win -data c:\Users\tujes\AppData\Roaming\Code\User\workspaceStorage\926129535c3579d5b8879cf28cb66572\redhat.java\jdt_ws --stdio
+
+Host: AMD Ryzen 7 5800H with Radeon Graphics         , 16 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3085)
+Time: Thu Feb 29 18:56:33 2024 Nepal Standard Time elapsed time: 4.570537 seconds (0d 0h 0m 4s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001b054ab9c90):  
+
+
+Current CompileTask:
+C2:   4570  388       4       java.lang.String::length (11 bytes)
+
+Stack: [0x0000008439500000,0x0000008439600000],  sp=0x00000084395fd338,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x669996]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000002708
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000084395fd3a8, RCX=0x0000000000000003, RDX=0x000001b057131980
+RSP=0x00000084395fd338, RBP=0x00000000000000b6, RSI=0x00000084395fd4c0, RDI=0x000001b057131980
+R8 =0x0000000000000182, R9 =0x0000000000002708, R10=0x000001b050001120, R11=0x00000084395fd338
+R12=0x000001b04f6d9998, R13=0x000001b04f6d6268, R14=0x000001b054ac16e0, R15=0x000001b054ac16e0
+RIP=0x00007ffa9dd99996, EFLAGS=0x0000000000010202
+
+
+Register to memory mapping:
+
+RIP=0x00007ffa9dd99996 jvm.dll
+RAX=0x0 is NULL
+RBX=0x00000084395fd3a8 is pointing into the stack for thread: 0x000001b054ab9c90
+RCX=0x0000000000000003 is an unknown value
+RDX=0x000001b057131980 points into unknown readable memory: 0x00007ffa9e061f30 | 30 1f 06 9e fa 7f 00 00
+RSP=0x00000084395fd338 is pointing into the stack for thread: 0x000001b054ab9c90
+RBP=0x00000000000000b6 is an unknown value
+RSI=0x00000084395fd4c0 is pointing into the stack for thread: 0x000001b054ab9c90
+RDI=0x000001b057131980 points into unknown readable memory: 0x00007ffa9e061f30 | 30 1f 06 9e fa 7f 00 00
+R8 =0x0000000000000182 is an unknown value
+R9 =0x0000000000002708 is an unknown value
+R10=0x000001b050001120 is pointing into metadata
+R11=0x00000084395fd338 is pointing into the stack for thread: 0x000001b054ab9c90
+R12=0x000001b04f6d9998 points into unknown readable memory: 0x6f630005b571ffff | ff ff 71 b5 05 00 63 6f
+R13=0x000001b04f6d6268 points into unknown readable memory: 0x29280003a560ffff | ff ff 60 a5 03 00 28 29
+R14=0x000001b054ac16e0 points into unknown readable memory: 0x00007ffa9e061b50 | 50 1b 06 9e fa 7f 00 00
+R15=0x000001b054ac16e0 points into unknown readable memory: 0x00007ffa9e061b50 | 50 1b 06 9e fa 7f 00 00
+
+
+Top of Stack: (sp=0x00000084395fd338)
+0x00000084395fd338:   00007ffa9d9ef3c2 0000000000000002
+0x00000084395fd348:   00007ffa9d8f4901 0000000000000000
+0x00000084395fd358:   0000000100041b58 00000084395ff5a0
+0x00000084395fd368:   00007ffa9dc92237 00000084395fd3d0
+0x00000084395fd378:   00000084395fd4b0 0000000000000050
+0x00000084395fd388:   0000000000000049 00000084395ff5a0
+0x00000084395fd398:   00007ffa9d8f53a5 0000000000000000
+0x00000084395fd3a8:   000001b054ab9c90 00000000000000b6
+0x00000084395fd3b8:   000001b0572ed2b0 000001b054ac16e0
+0x00000084395fd3c8:   000001b07fffffff 000001b04f6d9998
+0x00000084395fd3d8:   000001b04f6d6268 0000000100041b58
+0x00000084395fd3e8:   0000000100041b58 0000000000000000
+0x00000084395fd3f8:   0000000000000000 00000000000a0101
+0x00000084395fd408:   0000000000000050 0000000000000050
+0x00000084395fd418:   00000084395ff5a0 00000000000000b6
+0x00000084395fd428:   0000000000000049 00000084395fd4c0
+0x00000084395fd438:   00007ffa9d8f5000 0000000000000020
+0x00000084395fd448:   0000000000000050 000001b03bacd170
+0x00000084395fd458:   00000084395fdf0a 000001b054ac16e0
+0x00000084395fd468:   000001b054aee6e8 00000084395ff5a0
+0x00000084395fd478:   0000000000000020 00000084395fd560
+0x00000084395fd488:   00007ffa9d909e11 000001b054ab9c90
+0x00000084395fd498:   00000084395fd5f0 00000084395fd908
+0x00000084395fd4a8:   000001b03bacd170 000001b054ac16e0
+0x00000084395fd4b8:   0000000000000001 000001b050001120
+0x00000084395fd4c8:   000001b054ab9c90 00007ffa9d730000
+0x00000084395fd4d8:   00000084395fd800 0000000000000050
+0x00000084395fd4e8:   000001b054ab9801 00000084395fd800
+0x00000084395fd4f8:   00007ffa9d9dda78 000001b050001120
+0x00000084395fd508:   00000084395fea30 0000000000000000
+0x00000084395fd518:   00000084395fd908 0000000000000050
+0x00000084395fd528:   00007ffa9ddd285b 00000084395fdfd0 
+
+Instructions: (pc=0x00007ffa9dd99996)
+0x00007ffa9dd99896:   48 8b 46 40 48 03 78 40 0f b6 07 3c 04 74 0b 48
+0x00007ffa9dd998a6:   8b d7 48 8b ce e8 b0 6b c6 ff 48 8b 5c 24 30 48
+0x00007ffa9dd998b6:   8b 74 24 38 48 83 c4 20 5f c3 48 89 5c 24 08 48
+0x00007ffa9dd998c6:   89 74 24 10 57 48 83 ec 20 80 3d f2 99 51 00 00
+0x00007ffa9dd998d6:   48 8d 34 11 48 8b 3d ef 91 50 00 49 8b d8 74 22
+0x00007ffa9dd998e6:   48 85 db 74 1d 48 8b 47 38 0f be 88 f0 02 00 00
+0x00007ffa9dd998f6:   d1 e9 f6 c1 01 74 0b 48 8b d3 48 8b cf e8 18 27
+0x00007ffa9dd99906:   9a ff 80 3d 43 ed 4a 00 00 74 32 48 8b 47 38 0f
+0x00007ffa9dd99916:   be 90 f0 02 00 00 d1 ea f6 c2 01 74 20 8b 06 85
+0x00007ffa9dd99926:   c0 74 1a 8b 0d b9 d9 4a 00 8b d0 48 d3 e2 48 8b
+0x00007ffa9dd99936:   cf 48 03 15 a2 d9 4a 00 e8 dd 26 9a ff 48 85 db
+0x00007ffa9dd99946:   74 10 48 2b 1d 91 d9 4a 00 8b 0d 93 d9 4a 00 48
+0x00007ffa9dd99956:   d3 eb 89 1e e8 01 4d 00 00 48 8b 5c 24 30 90 48
+0x00007ffa9dd99966:   8b 74 24 38 48 83 c4 20 5f c3 80 3d 0b 9a 51 00
+0x00007ffa9dd99976:   00 48 8b d1 74 16 44 8b 49 08 8b 0d 72 d9 4a 00
+0x00007ffa9dd99986:   49 d3 e1 4c 03 0d 60 d9 4a 00 eb 04 4c 8b 49 08
+0x00007ffa9dd99996:   49 8b 01 49 8b c9 4c 8b 05 dd 23 53 00 48 ff a0
+0x00007ffa9dd999a6:   38 01 00 00 cc cc cc cc cc cc 48 8b c2 4c 8b c1
+0x00007ffa9dd999b6:   48 8b c8 48 8d 15 18 c1 33 00 e9 7b 5b 01 00 cc
+0x00007ffa9dd999c6:   cc cc cc cc cc cc cc cc cc cc 80 3d ab 99 51 00
+0x00007ffa9dd999d6:   00 4c 8b c2 48 8b d1 74 21 44 8b 49 08 8b 0d 0f
+0x00007ffa9dd999e6:   d9 4a 00 49 d3 e1 4c 03 0d fd d8 4a 00 49 8b c9
+0x00007ffa9dd999f6:   49 8b 01 48 ff a0 38 01 00 00 4c 8b 49 08 49 8b
+0x00007ffa9dd99a06:   c9 49 8b 01 48 ff a0 38 01 00 00 cc cc cc cc cc
+0x00007ffa9dd99a16:   cc cc cc cc cc cc cc cc cc cc 48 89 5c 24 08 57
+0x00007ffa9dd99a26:   48 83 ec 20 48 8b fa 48 8b d9 e8 fb a5 d2 ff 84
+0x00007ffa9dd99a36:   c0 74 27 48 8b d7 48 8b cb e8 6c b0 d2 ff 4c 8b
+0x00007ffa9dd99a46:   c3 48 8d 15 8a c0 33 00 48 8b cf 48 8b 5c 24 30
+0x00007ffa9dd99a56:   48 83 c4 20 5f e9 e0 5a 01 00 80 3d 1b 99 51 00
+0x00007ffa9dd99a66:   00 74 16 44 8b 4b 08 8b 0d 85 d8 4a 00 49 d3 e1
+0x00007ffa9dd99a76:   4c 03 0d 73 d8 4a 00 eb 04 4c 8b 4b 08 49 8b 01
+0x00007ffa9dd99a86:   4c 8b c7 48 8b d3 49 8b c9 48 8b 5c 24 30 48 83 
+
+
+Stack slot to memory mapping:
+stack at sp + 0 slots: 0x00007ffa9d9ef3c2 jvm.dll
+stack at sp + 1 slots: 0x0000000000000002 is an unknown value
+stack at sp + 2 slots: 0x00007ffa9d8f4901 jvm.dll
+stack at sp + 3 slots: 0x0 is NULL
+stack at sp + 4 slots: 0x0000000100041b58 is a pointer to class: 
+java.lang.String {0x0000000100041b60}
+ - instance size:     3
+ - klass size:        83
+ - access:            public final synchronized 
+ - state:             fully_initialized
+ - name:              'java/lang/String'
+ - super:             'java/lang/Object'
+ - sub:               
+ - arrays:            'java/lang/String'[]
+ - methods:           Array<T>(0x000001b050004d10)
+ - method ordering:   Array<T>(0x000001b050000018)
+ - default_methods:   Array<T>(0x0000000000000000)
+ - local interfaces:  Array<T>(0x000001b050003980)
+ - trans. interfaces: Array<T>(0x000001b050003980)
+ - constants:         constant pool [1202]/operands[28] {0x000001b050001128} for 'java/lang/String' cache=0x000001b050106440
+ - class loader data:  loader data: 0x000001b03ba64880 of 'bootstrap'
+ - class annotations:       Array<T>(0x0000000000000000)
+ - class type annotations:  Array<T>(0x0000000000000000)
+ - field annotations:       Array<T>(0x000001b050004c18)
+ - field type annotations:  Array<T>(0x0000000000000000)
+ - generic signature: 'Ljava/lang/Object;Ljava/io/Serializable;Ljava/lang/Comparable<Ljava/lang/String;>;Ljava/lang/CharSequence;Ljava/lang/constant/Constable;Ljava/lang/constant/ConstantDesc;'
+ - inner classes:     Array<T>(0x000001b05000d0c8)
+ - nest members:     Array<T>(0x000001b05000d108)
+ - permitted subclasses:     Array<T>(0x000001b050000028)
+ - java mirror:       a 'java/lang/Class'{0x00000000c0765a60} = 'java/lang/String'
+ - vtable length      5  (start addr: 0x0000000100041d20)
+ - itable length      20 (start addr: 0x0000000100041d48)
+ - ---- static fields (3 words):
+ - private static final 'serialVersionUID' 'J' @120 
+ - static final 'COMPACT_STRINGS' 'Z' @130 
+ - private static final 'serialPersistentFields' '[Ljava/io/ObjectStreamField;' @112 
+ - private static final 'REPL' 'C' @128 
+ - public static final 'CASE_INSENSITIVE_ORDER' 'Ljava/util/Comparator;' @116 
+ - static final 'LATIN1' 'B' @131 
+ - static final 'UTF16' 'B' @132 
+ - ---- non-static fields (3 words):
+ - private 'hash' 'I' @12 
+ - private final 'coder' 'B' @16 
+ - private 'hashIsZero' 'Z' @17 
+ - private final synchronized 'value' '[B' @20 
+ - non-static oop maps: 20-20 
+stack at sp + 5 slots: 0x00000084395ff5a0 is pointing into the stack for thread: 0x000001b054ab9c90
+stack at sp + 6 slots: 0x00007ffa9dc92237 jvm.dll
+stack at sp + 7 slots: 0x00000084395fd3d0 is pointing into the stack for thread: 0x000001b054ab9c90
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001b0572f7f90, length=22, elements={
+0x000001b03ba45750, 0x000001b04f8c8020, 0x000001b04f8c8ea0, 0x000001b054aaf320,
+0x000001b054aafe50, 0x000001b054ab0d70, 0x000001b054ab2a80, 0x000001b054ab9c90,
+0x000001b054abc6a0, 0x000001b054abf890, 0x000001b054bc05a0, 0x000001b054bc3330,
+0x000001b054bc0090, 0x000001b054bc2910, 0x000001b054bc0ab0, 0x000001b054bc0fc0,
+0x000001b054bc14d0, 0x000001b054bc19e0, 0x000001b054bc1ef0, 0x000001b054bc3840,
+0x000001b054bc2400, 0x000001b054bc2e20
+}
+
+Java Threads: ( => current thread )
+  0x000001b03ba45750 JavaThread "main" [_thread_blocked, id=4912, stack(0x0000008438c00000,0x0000008438d00000)]
+  0x000001b04f8c8020 JavaThread "Reference Handler" daemon [_thread_blocked, id=15020, stack(0x0000008438f00000,0x0000008439000000)]
+  0x000001b04f8c8ea0 JavaThread "Finalizer" daemon [_thread_blocked, id=28472, stack(0x0000008439000000,0x0000008439100000)]
+  0x000001b054aaf320 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13616, stack(0x0000008439100000,0x0000008439200000)]
+  0x000001b054aafe50 JavaThread "Attach Listener" daemon [_thread_blocked, id=24128, stack(0x0000008439200000,0x0000008439300000)]
+  0x000001b054ab0d70 JavaThread "Service Thread" daemon [_thread_blocked, id=18480, stack(0x0000008439300000,0x0000008439400000)]
+  0x000001b054ab2a80 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=344, stack(0x0000008439400000,0x0000008439500000)]
+=>0x000001b054ab9c90 
+  0x000001b054abc6a0 
+  0x000001b054abf890 JavaThread "Sweeper thread" daemon [_thread_blocked, id=24628, stack(0x0000008439700000,0x0000008439800000)]
+  0x000001b054bc05a0 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=24952, stack(0x0000008439800000,0x0000008439900000)]
+  0x000001b054bc3330 JavaThread "Notification Thread" daemon [_thread_blocked, id=17372, stack(0x0000008439900000,0x0000008439a00000)]
+  0x000001b054bc0090 JavaThread "Active Thread: Equinox Container: e3a6ed08-4769-43f2-8702-6460820640a8" [_thread_blocked, id=2288, stack(0x000000843a000000,0x000000843a100000)]
+  0x000001b054bc2910 JavaThread "Framework Event Dispatcher: Equinox Container: e3a6ed08-4769-43f2-8702-6460820640a8" daemon [_thread_blocked, id=3096, stack(0x000000843a100000,0x000000843a200000)]
+  0x000001b054bc0ab0 JavaThread "Start Level: Equinox Container: e3a6ed08-4769-43f2-8702-6460820640a8" daemon [_thread_in_Java, id=5780, stack(0x000000843a200000,0x000000843a300000)]
+  0x000001b054bc0fc0 JavaThread "Bundle File Closer" daemon [_thread_blocked, id=560, stack(0x000000843a400000,0x000000843a500000)]
+  0x000001b054bc14d0 JavaThread "SCR Component Actor" daemon [_thread_blocked, id=520, stack(0x000000843a500000,0x000000843a600000)]
+  0x000001b054bc19e0 JavaThread "SCR Component Registry" daemon [_thread_blocked, id=7088, stack(0x000000843a800000,0x000000843a900000)]
+  0x000001b054bc1ef0 JavaThread "Worker-JM" [_thread_blocked, id=26076, stack(0x000000843ab00000,0x000000843ac00000)]
+  0x000001b054bc3840 JavaThread "Worker-0: Checking project encoding" [_thread_blocked, id=26584, stack(0x000000843ac00000,0x000000843ad00000)]
+  0x000001b054bc2400 JavaThread "Worker-1: Refreshing workspace" [_thread_blocked, id=18796, stack(0x000000843ad00000,0x000000843ae00000)]
+  0x000001b054bc2e20 JavaThread "Worker-2" [_thread_blocked, id=19064, stack(0x000000843b000000,0x000000843b100000)]
+
+Other Threads:
+  0x000001b03bad0340 VMThread "VM Thread" [stack: 0x0000008438e00000,0x0000008438f00000] [id=23212]
+  0x000001b054c5f1b0 WatcherThread [stack: 0x0000008439a00000,0x0000008439b00000] [id=11028]
+  0x000001b03ba5c430 GCTaskThread "GC Thread#0" [stack: 0x0000008438d00000,0x0000008438e00000] [id=18268]
+  0x000001b054d9ecf0 GCTaskThread "GC Thread#1" [stack: 0x0000008439b00000,0x0000008439c00000] [id=14572]
+  0x000001b056be2020 GCTaskThread "GC Thread#2" [stack: 0x0000008439c00000,0x0000008439d00000] [id=29780]
+  0x000001b056be22e0 GCTaskThread "GC Thread#3" [stack: 0x0000008439d00000,0x0000008439e00000] [id=26988]
+  0x000001b056be25a0 GCTaskThread "GC Thread#4" [stack: 0x0000008439e00000,0x0000008439f00000] [id=22192]
+  0x000001b056be2860 GCTaskThread "GC Thread#5" [stack: 0x0000008439f00000,0x000000843a000000] [id=5720]
+  0x000001b056cb67e0 GCTaskThread "GC Thread#6" [stack: 0x000000843a300000,0x000000843a400000] [id=23248]
+  0x000001b03987a4c0 GCTaskThread "GC Thread#7" [stack: 0x000000843a600000,0x000000843a700000] [id=8972]
+  0x000001b056d86720 GCTaskThread "GC Thread#8" [stack: 0x000000843a700000,0x000000843a800000] [id=3796]
+  0x000001b056e7f930 GCTaskThread "GC Thread#9" [stack: 0x000000843a900000,0x000000843aa00000] [id=27396]
+  0x000001b057060030 GCTaskThread "GC Thread#10" [stack: 0x000000843aa00000,0x000000843ab00000] [id=20016]
+  0x000001b0570e23d0 GCTaskThread "GC Thread#11" [stack: 0x000000843ae00000,0x000000843af00000] [id=5596]
+  0x000001b057209e50 GCTaskThread "GC Thread#12" [stack: 0x000000843af00000,0x000000843b000000] [id=13192]
+
+Threads with active compile tasks:
